@@ -2,6 +2,15 @@
 
 This directory contains the iOS application component for integrating YouTube video playback with ML-powered metadata management.
 
+## 📚 Documentation
+
+- **[Quick Start Guide](QUICKSTART.md)** - Get started in 5 minutes
+- **[API Reference](API_REFERENCE.md)** - Complete API documentation
+- **[Integration Guide](INTEGRATION_GUIDE.md)** - Detailed integration instructions
+- **[Configuration](CONFIGURATION.md)** - Setup and configuration options
+- **[Examples](EXAMPLES.md)** - Code examples and use cases
+- **[Changelog](CHANGELOG.md)** - Version history and updates
+
 ## Overview
 
 The iOS integration adds YouTube video playback functionality and ML-based metadata enrichment to the zapret-discord-youtube repository. This component is separate from the Windows-based network filtering tool and provides iOS developers with a ready-to-use YouTube player implementation.
