@@ -13,8 +13,8 @@ let package = Package(
         ),
     ],
     dependencies: [
-        // YouTube iOS Player Helper
-        .package(url: "https://github.com/youtube/youtube-ios-player-helper.git", from: "1.0.4"),
+        // YouTube iOS Player Helper - pinned to specific version for reproducible builds
+        .package(url: "https://github.com/youtube/youtube-ios-player-helper.git", exact: "1.0.4"),
     ],
     targets: [
         .target(

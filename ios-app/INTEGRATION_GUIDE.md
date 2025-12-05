@@ -22,6 +22,18 @@ This guide provides step-by-step instructions for integrating the YouTube iOS Pl
 - **Swift API**: Modern, type-safe Swift interfaces
 - **Example Code**: Ready-to-use code samples
 
+### Finding YouTube Video IDs
+
+YouTube video IDs are 11-character alphanumeric strings found in video URLs:
+
+- From URL: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
+- Video ID: `dQw4w9WgXcQ`
+
+You can extract the ID from:
+- Standard URLs: After `v=` parameter
+- Short URLs: `youtu.be/VIDEO_ID`
+- Embed URLs: `/embed/VIDEO_ID`
+
 ## Prerequisites
 
 Before you begin, ensure you have:

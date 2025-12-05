@@ -69,8 +69,12 @@ func setupPlayer() {
 
 ### Step 4: Load a Video
 
+> **Finding Video IDs**: Extract the video ID from any YouTube URL.  
+> For example, from `https://www.youtube.com/watch?v=dQw4w9WgXcQ`, the video ID is `dQw4w9WgXcQ` (the 11-character alphanumeric string after `v=`).
+
 ```swift
 func loadVideo() {
+    // Replace with your actual YouTube video ID
     playerManager.loadVideo(videoId: "dQw4w9WgXcQ")
 }
 ```

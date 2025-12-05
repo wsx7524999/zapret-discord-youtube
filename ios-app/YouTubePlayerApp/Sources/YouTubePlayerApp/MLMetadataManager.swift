@@ -12,18 +12,25 @@ public class MLMetadataManager {
     
     /// Enrich video metadata with ML-based tags and categories
     /// - Parameter metadata: Base video metadata
-    /// - Returns: Enriched metadata with ML-generated tags
+    /// - Returns: Enriched metadata with ML-generated tags and calculated confidence
     public func enrichMetadata(_ metadata: VideoMetadata) -> EnrichedMetadata {
         let mlTags = generateMLTags(from: metadata)
         let category = classifyCategory(from: metadata)
         let sentiment = analyzeSentiment(from: metadata.description)
+        
+        // Calculate confidence based on analysis quality
+        let confidence = calculateConfidence(
+            tagCount: mlTags.count,
+            hasCategory: !category.isEmpty,
+            textLength: metadata.description.count + metadata.title.count
+        )
         
         let enriched = EnrichedMetadata(
             baseMetadata: metadata,
             mlGeneratedTags: mlTags,
             category: category,
             sentiment: sentiment,
-            confidence: 0.85
+            confidence: confidence
         )
         
         // Store in metadata store
@@ -31,6 +38,26 @@ public class MLMetadataManager {
         metadataStore[key] = enriched
         
         return enriched
+    }
+    
+    /// Calculate confidence score based on analysis quality
+    private func calculateConfidence(tagCount: Int, hasCategory: Bool, textLength: Int) -> Double {
+        var confidence = 0.5 // Base confidence
+        
+        // Increase confidence based on tag generation
+        confidence += min(Double(tagCount) * 0.1, 0.3)
+        
+        // Boost if category was identified
+        if hasCategory {
+            confidence += 0.1
+        }
+        
+        // Boost for sufficient text analysis
+        if textLength > 50 {
+            confidence += 0.1
+        }
+        
+        return min(confidence, 1.0)
     }
     
     /// Generate ML-based tags from metadata

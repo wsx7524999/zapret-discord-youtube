@@ -84,7 +84,9 @@ public class YouTubePlayerViewController: UIViewController {
         // Display metadata
         displayMetadata(enrichedMetadata)
         
-        // Load video (using a sample video ID - replace with actual ID)
+        // Load video with your actual video ID
+        // Get video ID from YouTube URL: https://www.youtube.com/watch?v=VIDEO_ID
+        // Example uses "dQw4w9WgXcQ" for demonstration (Rick Astley - Never Gonna Give You Up)
         playerManager.loadVideo(videoId: "dQw4w9WgXcQ", metadata: metadata)
     }
     
