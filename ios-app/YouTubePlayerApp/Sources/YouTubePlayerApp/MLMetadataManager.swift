@@ -10,6 +10,14 @@ public class MLMetadataManager {
     
     private init() {}
     
+    // Confidence calculation parameters
+    private let baseConfidence: Double = 0.5
+    private let tagCountBoost: Double = 0.1
+    private let maxTagBoost: Double = 0.3
+    private let categoryBoost: Double = 0.1
+    private let textLengthBoost: Double = 0.1
+    private let minTextLengthForBoost: Int = 50
+    
     /// Enrich video metadata with ML-based tags and categories
     /// - Parameter metadata: Base video metadata
     /// - Returns: Enriched metadata with ML-generated tags and calculated confidence
@@ -42,19 +50,19 @@ public class MLMetadataManager {
     
     /// Calculate confidence score based on analysis quality
     private func calculateConfidence(tagCount: Int, hasCategory: Bool, textLength: Int) -> Double {
-        var confidence = 0.5 // Base confidence
+        var confidence = baseConfidence
         
         // Increase confidence based on tag generation
-        confidence += min(Double(tagCount) * 0.1, 0.3)
+        confidence += min(Double(tagCount) * tagCountBoost, maxTagBoost)
         
         // Boost if category was identified
         if hasCategory {
-            confidence += 0.1
+            confidence += categoryBoost
         }
         
         // Boost for sufficient text analysis
-        if textLength > 50 {
-            confidence += 0.1
+        if textLength > minTextLengthForBoost {
+            confidence += textLengthBoost
         }
         
         return min(confidence, 1.0)
