@@ -20,7 +20,8 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/youtube/youtube-ios-player-helper.git", from: "1.0.4"),
+        // Using upToNextMinor to allow patch updates (1.0.x) while maintaining API compatibility
+        .package(url: "https://github.com/youtube/youtube-ios-player-helper.git", .upToNextMinor(from: "1.0.4")),
     ],
     targets: [
         .target(
@@ -41,8 +42,8 @@ let package = Package(
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/youtube/youtube-ios-player-helper.git", from: "1.0.4"),
-    .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.8.0"),
+    .package(url: "https://github.com/youtube/youtube-ios-player-helper.git", .upToNextMinor(from: "1.0.4")),
+    .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMinor(from: "5.8.0")),
 ]
 ```
 
