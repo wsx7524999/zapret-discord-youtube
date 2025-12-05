@@ -1,0 +1,24 @@
+# Podfile for YouTubePlayerApp
+# Supports iOS 15.0 and above
+
+platform :ios, '15.0'
+use_frameworks!
+
+target 'YouTubePlayerApp' do
+  # YouTube iOS Player Helper
+  pod 'youtube-ios-player-helper', '~> 1.0'
+  
+  # Note: ML Metadata is typically a Python library
+  # For iOS, we use custom implementation in MLMetadataManager.swift
+  # If you need TensorFlow Lite for ML operations, uncomment below:
+  # pod 'TensorFlowLiteSwift', '~> 2.13.0'
+  
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+    end
+  end
+end
