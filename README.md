@@ -28,7 +28,36 @@
 > [!IMPORTANT]
 > Все бинарные файлы в папке [`bin`](./bin) взяты из [zapret-win-bundle/zapret-winws](https://github.com/bol-van/zapret-win-bundle/tree/master/zapret-winws). Вы можете это проверить с помощью хэшей/контрольных сумм. Проверяйте, что запускаете, используя сборки из интернета!
 
-## ⚙️Использование
+## 📱 iOS Integration
+
+Репозиторий теперь включает интеграцию iOS для YouTube Player Helper и ML Metadata! 
+
+**Возможности iOS компонента:**
+- 🎥 Встраивание и воспроизведение YouTube видео
+- 🤖 ML-обработка метаданных (категоризация, теги, анализ тональности)
+- 📊 Управление метаданными видео
+- 🔧 Простая интеграция через Swift Package Manager или CocoaPods
+
+**Документация:**
+- [📖 Полная документация](./ios-app/README.md)
+- [🚀 Руководство по интеграции](./ios-app/INTEGRATION_GUIDE.md)
+- [⚙️ Конфигурация](./ios-app/CONFIGURATION.md)
+- [💡 Примеры использования](./ios-app/EXAMPLES.md)
+
+**Быстрый старт:**
+```swift
+import YouTubePlayerApp
+
+let playerManager = YouTubePlayerManager()
+let playerView = playerManager.createPlayerView(frame: ...)
+playerManager.loadVideo(videoId: "VIDEO_ID")
+```
+
+Подробнее смотрите в директории [`ios-app/`](./ios-app/)
+
+---
+
+## ⚙️Использование (Windows)
 
 1. Включите Secure DNS. В Chrome - "Использовать безопасный DNS", и выбрать поставщика услуг DNS (выбрать вариант, отличный от поставщика по умолчанию). В Firefox - "Включить DNS через HTTPS, используя: Максимальную защиту"
     * В **Windows 11** поддерживается включение Secure DNS прямо в настройках - [инструкция тут](https://www.howtogeek.com/765940/how-to-enable-dns-over-https-on-windows-11/). Рекомендуется, если вы пользуетесь Windows 11
