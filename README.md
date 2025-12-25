@@ -195,6 +195,22 @@ sc delete название_из_первого_шага
 
 Проект распространяется на условиях лицензии [MIT](https://github.com/Flowseal/zapret-discord-youtube/blob/main/LICENSE.txt)
 
+## 📋Метаданные проекта
+
+Репозиторий включает комплексные метаданные в различных форматах:
+
+- **[METADATA.json](./METADATA.json)** - подробные метаданные в формате JSON
+- **[METADATA.yml](./METADATA.yml)** - метаданные в формате YAML
+- **[CITATION.cff](./CITATION.cff)** - Citation File Format для научных ссылок
+- **[codemeta.json](./codemeta.json)** - метаданные в стандарте CodeMeta
+- **[.zenodo.json](./.zenodo.json)** - метаданные для интеграции с Zenodo
+
+Эти файлы содержат полную информацию о проекте, включая:
+- Техническую спецификацию и зависимости
+- Информацию об авторах и лицензировании
+- Описание функций и возможностей
+- Ссылки на документацию и поддержку
+
 ## 🩷Благодарность участникам проекта
 
 [![Contributors](https://contrib.rocks/image?repo=Flowseal/zapret-discord-youtube)](https://github.com/Flowseal/zapret-discord-youtube/graphs/contributors)

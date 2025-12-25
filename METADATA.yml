@@ -1,0 +1,107 @@
+# Project Metadata
+
+name: zapret-discord-youtube
+version: 1.0.0
+description: Windows network filtering tool for bypassing restrictions on Discord and YouTube with iOS integration
+
+# Repository
+repository:
+  type: git
+  url: https://github.com/wsx7524999/zapret-discord-youtube
+  original_author: Flowseal
+  original_url: https://github.com/Flowseal/zapret-discord-youtube
+
+# Authors
+authors:
+  maintainers:
+    - name: wsx7524999
+      role: Fork Maintainer
+    - name: Flowseal
+      role: Original Creator
+      url: https://github.com/Flowseal
+  original_developers:
+    - name: bol-van
+      role: Zapret Original Developer
+      url: https://github.com/bol-van
+
+# Technical Information
+platforms:
+  - name: Windows
+    primary: true
+    versions: [Windows 7, Windows 10, Windows 11]
+    architecture: [x64]
+  - name: iOS
+    primary: false
+    versions: [iOS 15.0+]
+    description: YouTube Player integration component
+
+languages:
+  primary:
+    - name: Batch Script
+      purpose: Windows automation scripts
+  secondary:
+    - name: Swift
+      version: 5.9+
+      purpose: iOS YouTube player integration
+
+# Licensing
+license:
+  main:
+    type: MIT
+    file: LICENSE.txt
+    copyright:
+      - "Copyright (c) 2016-2025 bol-van"
+      - "Copyright (c) 2024-2025 Flowseal"
+  third_party:
+    - component: WinDivert
+      license: LGPL-3.0 OR GPL-2.0
+      url: https://github.com/basil00/WinDivert
+    - component: zapret binaries
+      license: MIT
+      url: https://github.com/bol-van/zapret
+
+# Features
+features:
+  windows:
+    - Network Traffic Filtering
+    - Multiple Bypass Strategies (18 variants)
+    - Service Installation
+    - Domain and IP Management
+    - Diagnostics Tool
+    - Game Filter Mode
+    - Auto-Update Support
+    - Secure DNS Support
+  ios:
+    - YouTube Video Playback
+    - ML Metadata Processing
+    - Category Classification
+    - Sentiment Analysis
+    - Tag Generation
+    - Metadata Management
+
+# Documentation
+documentation:
+  main: README.md
+  license: LICENSE.txt
+  ios_docs:
+    - ios-app/README.md
+    - ios-app/QUICKSTART.md
+    - ios-app/API_REFERENCE.md
+    - ios-app/INTEGRATION_GUIDE.md
+    - ios-app/CONFIGURATION.md
+    - ios-app/EXAMPLES.md
+    - ios-app/CHANGELOG.md
+
+# Support
+support:
+  issues: https://github.com/wsx7524999/zapret-discord-youtube/issues
+  upstream: https://github.com/Flowseal/zapret-discord-youtube
+  original_project: https://github.com/bol-van/zapret-win-bundle
+
+# Metadata Information
+metadata:
+  created: 2025-12-25
+  last_updated: 2025-12-25
+  version: 1.0.0
+  format: YAML
+  encoding: UTF-8

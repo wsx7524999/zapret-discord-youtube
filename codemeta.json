@@ -1,0 +1,136 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "zapret-discord-youtube",
+  "description": "A Windows-based network filtering tool designed to bypass network restrictions for Discord and YouTube, with integrated iOS YouTube player support and ML-powered metadata processing.",
+  "identifier": "https://github.com/wsx7524999/zapret-discord-youtube",
+  "codeRepository": "https://github.com/wsx7524999/zapret-discord-youtube",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "1.0.0",
+  "dateCreated": "2025-12-25",
+  "dateModified": "2025-12-25",
+  "programmingLanguage": [
+    {
+      "@type": "ComputerLanguage",
+      "name": "Batch Script",
+      "url": "https://en.wikipedia.org/wiki/Batch_file"
+    },
+    {
+      "@type": "ComputerLanguage",
+      "name": "Swift",
+      "version": "5.9",
+      "url": "https://swift.org"
+    }
+  ],
+  "operatingSystem": [
+    "Windows 7",
+    "Windows 10",
+    "Windows 11",
+    "iOS 15.0+"
+  ],
+  "applicationCategory": "Network Utilities",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "wsx7524999",
+      "role": "Fork Maintainer"
+    },
+    {
+      "@type": "Person",
+      "name": "Flowseal",
+      "role": "Original Creator",
+      "url": "https://github.com/Flowseal"
+    },
+    {
+      "@type": "Person",
+      "name": "bol-van",
+      "role": "Zapret Original Developer",
+      "url": "https://github.com/bol-van"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Organization",
+      "name": "GitHub Community Contributors"
+    }
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "name": "wsx7524999"
+    }
+  ],
+  "developmentStatus": "active",
+  "keywords": [
+    "network-filtering",
+    "bypass",
+    "discord",
+    "youtube",
+    "windows",
+    "windivert",
+    "zapret",
+    "ios",
+    "youtube-player",
+    "machine-learning",
+    "metadata",
+    "deep-packet-inspection",
+    "network-security",
+    "traffic-filtering"
+  ],
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "WinDivert",
+      "version": "2.x",
+      "url": "https://github.com/basil00/WinDivert"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Windows",
+      "version": "7+",
+      "operatingSystem": "Windows"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Xcode",
+      "version": "14.0+",
+      "operatingSystem": "macOS"
+    }
+  ],
+  "targetProduct": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Discord",
+      "description": "Network bypass for Discord communication platform"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "YouTube",
+      "description": "Network bypass for YouTube video streaming"
+    }
+  ],
+  "isBasedOn": [
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "zapret",
+      "url": "https://github.com/bol-van/zapret"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "zapret-win-bundle",
+      "url": "https://github.com/bol-van/zapret-win-bundle"
+    }
+  ],
+  "softwareHelp": [
+    {
+      "@type": "WebPage",
+      "url": "https://github.com/wsx7524999/zapret-discord-youtube/blob/main/README.md"
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://github.com/wsx7524999/zapret-discord-youtube/tree/main/ios-app"
+    }
+  ],
+  "issueTracker": "https://github.com/wsx7524999/zapret-discord-youtube/issues",
+  "readme": "https://github.com/wsx7524999/zapret-discord-youtube/blob/main/README.md"
+}
