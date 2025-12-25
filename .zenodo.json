@@ -1,0 +1,74 @@
+{
+  "title": "zapret-discord-youtube: Network Filtering Tool with iOS Integration",
+  "description": "A Windows-based network filtering tool designed to bypass network restrictions for Discord and YouTube, with integrated iOS YouTube player support and ML-powered metadata processing. Alternative to zapret-win-bundle with enhanced functionality.",
+  "creators": [
+    {
+      "name": "wsx7524999",
+      "affiliation": "Independent"
+    },
+    {
+      "name": "Flowseal",
+      "affiliation": "Independent"
+    },
+    {
+      "name": "bol-van",
+      "affiliation": "Independent"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "GitHub Contributors",
+      "type": "Other"
+    }
+  ],
+  "keywords": [
+    "network-filtering",
+    "bypass",
+    "discord",
+    "youtube",
+    "windows",
+    "windivert",
+    "zapret",
+    "ios",
+    "youtube-player",
+    "machine-learning",
+    "metadata",
+    "deep-packet-inspection",
+    "network-security",
+    "traffic-filtering"
+  ],
+  "license": {
+    "id": "MIT"
+  },
+  "upload_type": "software",
+  "access_right": "open",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/bol-van/zapret",
+      "relation": "isVariantFormOf",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/bol-van/zapret-win-bundle",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/Flowseal/zapret-discord-youtube",
+      "relation": "isVariantFormOf",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/basil00/WinDivert",
+      "relation": "requires",
+      "scheme": "url"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "github"
+    }
+  ],
+  "version": "1.0.0"
+}

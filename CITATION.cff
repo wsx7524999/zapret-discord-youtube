@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "zapret-discord-youtube"
+abstract: "A Windows-based network filtering tool designed to bypass network restrictions for Discord and YouTube, with integrated iOS YouTube player support. Alternative to zapret-win-bundle with enhanced functionality."
+authors:
+  - family-names: "wsx7524999"
+    role: "Fork Maintainer"
+  - family-names: "Flowseal"
+    role: "Original Creator"
+  - family-names: "bol-van"
+    role: "Zapret Original Developer"
+repository-code: "https://github.com/wsx7524999/zapret-discord-youtube"
+url: "https://github.com/wsx7524999/zapret-discord-youtube"
+license: MIT
+keywords:
+  - network-filtering
+  - bypass
+  - discord
+  - youtube
+  - windows
+  - windivert
+  - zapret
+  - ios
+  - youtube-player
+  - machine-learning
+  - metadata
+version: "1.0.0"
+date-released: "2025-12-25"
+references:
+  - type: software
+    title: "zapret"
+    authors:
+      - family-names: "bol-van"
+    repository-code: "https://github.com/bol-van/zapret"
+    license: MIT
+  - type: software
+    title: "zapret-win-bundle"
+    authors:
+      - family-names: "bol-van"
+    repository-code: "https://github.com/bol-van/zapret-win-bundle"
+    license: MIT
+  - type: software
+    title: "WinDivert"
+    authors:
+      - family-names: "basil00"
+    repository-code: "https://github.com/basil00/WinDivert"
+    license: "LGPL-3.0 OR GPL-2.0"

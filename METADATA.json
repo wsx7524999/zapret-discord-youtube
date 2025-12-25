@@ -1,0 +1,401 @@
+{
+  "project": {
+    "name": "zapret-discord-youtube",
+    "fullName": "Zapret Discord YouTube - Windows Network Filtering Tool",
+    "version": "1.0.0",
+    "description": "A Windows-based network filtering tool designed to bypass network restrictions for Discord and YouTube, with integrated iOS YouTube player support. Alternative to zapret-win-bundle with enhanced functionality.",
+    "tagline": "Network bypass solution for Discord, YouTube, and other services with ML-powered iOS integration",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/wsx7524999/zapret-discord-youtube",
+      "originalAuthor": "Flowseal",
+      "originalUrl": "https://github.com/Flowseal/zapret-discord-youtube"
+    }
+  },
+  "authors": {
+    "maintainers": [
+      {
+        "name": "wsx7524999",
+        "role": "Fork Maintainer"
+      },
+      {
+        "name": "Flowseal",
+        "role": "Original Creator",
+        "url": "https://github.com/Flowseal"
+      }
+    ],
+    "originalDevelopers": [
+      {
+        "name": "bol-van",
+        "role": "Zapret Original Developer",
+        "url": "https://github.com/bol-van",
+        "supportUrl": "https://github.com/bol-van/zapret?tab=readme-ov-file#%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0"
+      }
+    ]
+  },
+  "technical": {
+    "platforms": [
+      {
+        "name": "Windows",
+        "primary": true,
+        "versions": ["Windows 7", "Windows 10", "Windows 11"],
+        "architecture": ["x64"]
+      },
+      {
+        "name": "iOS",
+        "primary": false,
+        "versions": ["iOS 15.0+"],
+        "description": "YouTube Player integration component"
+      }
+    ],
+    "languages": {
+      "primary": [
+        {
+          "name": "Batch Script",
+          "purpose": "Windows automation scripts",
+          "fileCount": 18
+        }
+      ],
+      "secondary": [
+        {
+          "name": "Swift",
+          "purpose": "iOS YouTube player integration",
+          "version": "5.9+",
+          "fileCount": 6
+        }
+      ]
+    },
+    "dependencies": {
+      "windows": [
+        {
+          "name": "WinDivert",
+          "version": "2.x",
+          "purpose": "Network packet interception and filtering",
+          "url": "https://github.com/basil00/WinDivert",
+          "license": "LGPL-3.0 OR GPL-2.0",
+          "files": ["WinDivert.dll", "WinDivert64.sys"]
+        },
+        {
+          "name": "winws.exe",
+          "purpose": "Core bypass executable",
+          "source": "zapret-win-bundle"
+        },
+        {
+          "name": "cygwin1.dll",
+          "purpose": "POSIX compatibility layer"
+        }
+      ],
+      "ios": [
+        {
+          "name": "Swift Package Manager",
+          "purpose": "Package management",
+          "optional": false
+        },
+        {
+          "name": "CocoaPods",
+          "purpose": "Alternative package management",
+          "optional": true
+        }
+      ]
+    },
+    "buildSystem": {
+      "windows": "None (pre-compiled binaries)",
+      "ios": ["Swift Package Manager", "CocoaPods"]
+    }
+  },
+  "features": {
+    "windows": [
+      {
+        "name": "Network Traffic Filtering",
+        "description": "Advanced network packet manipulation for bypassing restrictions"
+      },
+      {
+        "name": "Multiple Bypass Strategies",
+        "description": "18 different strategies (general.bat variants) for different network environments"
+      },
+      {
+        "name": "Service Installation",
+        "description": "Install bypass strategies to Windows services for automatic startup"
+      },
+      {
+        "name": "Domain and IP Management",
+        "description": "Customizable lists for domains and IP addresses to filter"
+      },
+      {
+        "name": "Diagnostics Tool",
+        "description": "Built-in diagnostics for troubleshooting common issues"
+      },
+      {
+        "name": "Game Filter Mode",
+        "description": "Special mode for gaming and UDP/TCP services on high ports"
+      },
+      {
+        "name": "Auto-Update Support",
+        "description": "Check and update IP/domain lists from repository"
+      },
+      {
+        "name": "Secure DNS Support",
+        "description": "Integration with DNS over HTTPS for enhanced privacy"
+      }
+    ],
+    "ios": [
+      {
+        "name": "YouTube Video Playback",
+        "description": "Full integration with YouTube iOS Player Helper"
+      },
+      {
+        "name": "ML Metadata Processing",
+        "description": "Automatic metadata enrichment with ML-powered analysis"
+      },
+      {
+        "name": "Category Classification",
+        "description": "AI-based video category detection"
+      },
+      {
+        "name": "Sentiment Analysis",
+        "description": "Analyze video content sentiment"
+      },
+      {
+        "name": "Tag Generation",
+        "description": "Automatic tag generation for videos"
+      },
+      {
+        "name": "Metadata Management",
+        "description": "Organize and enrich video-related data"
+      }
+    ]
+  },
+  "components": {
+    "windows": {
+      "scripts": [
+        {
+          "name": "general.bat",
+          "purpose": "Manual strategy execution",
+          "variants": ["ALT", "ALT2-10", "FAKE TLS AUTO", "SIMPLE FAKE"]
+        },
+        {
+          "name": "service.bat",
+          "purpose": "Service management and diagnostics",
+          "functions": [
+            "Install Service",
+            "Remove Services",
+            "Check Status",
+            "Run Diagnostics",
+            "Check Updates",
+            "Switch Game Filter",
+            "Switch ipset",
+            "Update ipset list"
+          ]
+        }
+      ],
+      "dataLists": [
+        {
+          "name": "list-general.txt",
+          "purpose": "Domain whitelist for bypass",
+          "location": "lists/"
+        },
+        {
+          "name": "list-exclude.txt",
+          "purpose": "Domain exclusion list",
+          "location": "lists/"
+        },
+        {
+          "name": "ipset-all.txt",
+          "purpose": "IP addresses and subnets for bypass",
+          "location": "lists/"
+        },
+        {
+          "name": "ipset-exclude.txt",
+          "purpose": "IP exclusion list",
+          "location": "lists/"
+        }
+      ],
+      "binaries": [
+        {
+          "name": "winws.exe",
+          "purpose": "Core bypass engine",
+          "source": "zapret-win-bundle"
+        },
+        {
+          "name": "WinDivert.dll",
+          "purpose": "WinDivert library"
+        },
+        {
+          "name": "WinDivert64.sys",
+          "purpose": "WinDivert kernel driver"
+        }
+      ]
+    },
+    "ios": {
+      "modules": [
+        {
+          "name": "YouTubePlayerApp",
+          "purpose": "Main iOS module for YouTube integration"
+        }
+      ],
+      "documentation": [
+        "README.md",
+        "QUICKSTART.md",
+        "API_REFERENCE.md",
+        "INTEGRATION_GUIDE.md",
+        "CONFIGURATION.md",
+        "EXAMPLES.md",
+        "CHANGELOG.md"
+      ],
+      "packageDefinitions": [
+        "Package.swift",
+        "Podfile"
+      ]
+    }
+  },
+  "licensing": {
+    "main": {
+      "type": "MIT",
+      "file": "LICENSE.txt",
+      "copyright": [
+        "Copyright (c) 2016-2025 bol-van",
+        "Copyright (c) 2024-2025 Flowseal"
+      ]
+    },
+    "thirdParty": [
+      {
+        "component": "WinDivert",
+        "license": "LGPL-3.0 OR GPL-2.0",
+        "url": "https://github.com/basil00/WinDivert",
+        "author": "basil00"
+      },
+      {
+        "component": "zapret (binaries)",
+        "license": "MIT",
+        "url": "https://github.com/bol-van/zapret",
+        "author": "bol-van"
+      }
+    ],
+    "notices": [
+      "Binary files from bol-van/zapret-win-bundle are included as-is",
+      "WinDivert binaries are included without modification",
+      "WinDivert may trigger antivirus software as it's a network filtering tool"
+    ]
+  },
+  "documentation": {
+    "main": [
+      {
+        "file": "README.md",
+        "purpose": "Main project documentation (Russian)",
+        "topics": [
+          "Installation instructions",
+          "Usage guide",
+          "Troubleshooting",
+          "FAQ",
+          "Contributing"
+        ]
+      },
+      {
+        "file": "LICENSE.txt",
+        "purpose": "License information and legal notices"
+      }
+    ],
+    "ios": [
+      {
+        "location": "ios-app/",
+        "files": [
+          "README.md",
+          "QUICKSTART.md",
+          "API_REFERENCE.md",
+          "INTEGRATION_GUIDE.md",
+          "CONFIGURATION.md",
+          "EXAMPLES.md",
+          "CHANGELOG.md"
+        ]
+      }
+    ],
+    "languages": ["Russian", "English (iOS docs)"]
+  },
+  "support": {
+    "issues": "https://github.com/wsx7524999/zapret-discord-youtube/issues",
+    "discussions": "https://github.com/Flowseal/zapret-discord-youtube/discussions",
+    "upstreamRepository": "https://github.com/Flowseal/zapret-discord-youtube",
+    "originalProject": "https://github.com/bol-van/zapret-win-bundle",
+    "supportOriginalDeveloper": "https://github.com/bol-van/zapret?tab=readme-ov-file#%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0"
+  },
+  "usage": {
+    "windows": {
+      "quickStart": [
+        "Enable Secure DNS in browser or Windows 11 settings",
+        "Download latest release from GitHub",
+        "Extract to path without special characters",
+        "Run desired general*.bat strategy",
+        "Use service.bat to install as Windows service"
+      ],
+      "requirements": [
+        "Administrator privileges for service installation",
+        "Secure DNS configured",
+        "Antivirus exceptions may be needed for WinDivert"
+      ]
+    },
+    "ios": {
+      "quickStart": [
+        "Add package via Swift Package Manager or CocoaPods",
+        "Import YouTubePlayerApp module",
+        "Create YouTubePlayerManager instance",
+        "Load videos using video IDs"
+      ],
+      "requirements": [
+        "iOS 15.0+",
+        "Xcode 14.0+",
+        "Swift 5.9+"
+      ]
+    }
+  },
+  "targetAudience": {
+    "primary": [
+      "Russian-speaking users experiencing network restrictions",
+      "Users seeking Discord/YouTube access bypass",
+      "Windows power users"
+    ],
+    "secondary": [
+      "iOS developers integrating YouTube playback",
+      "Developers needing ML-powered video metadata"
+    ]
+  },
+  "warnings": {
+    "security": [
+      "WinDivert may trigger antivirus warnings - this is expected",
+      "Only use files from official repository releases",
+      "Administrator privileges required for installation",
+      "Always verify file checksums before use"
+    ],
+    "legal": [
+      "Users are responsible for compliance with local laws",
+      "Bypassing network restrictions may violate terms of service",
+      "Use at your own risk"
+    ],
+    "compatibility": [
+      "Different strategies work for different ISPs",
+      "Some strategies may stop working over time",
+      "Game anti-cheat systems may detect WinDivert",
+      "Windows 7 requires special WinDivert version"
+    ]
+  },
+  "metadata": {
+    "created": "2025-12-25",
+    "lastUpdated": "2025-12-25",
+    "metadataVersion": "1.0.0",
+    "metadataFormat": "JSON",
+    "encoding": "UTF-8"
+  },
+  "references": {
+    "upstream": {
+      "zapret": "https://github.com/bol-van/zapret",
+      "zapret-win-bundle": "https://github.com/bol-van/zapret-win-bundle"
+    },
+    "dependencies": {
+      "WinDivert": "https://github.com/basil00/WinDivert",
+      "WinDivertHide": "https://github.com/bol-van/zapret-win-bundle/tree/master/windivert-hide"
+    },
+    "documentation": {
+      "nfqwsParameters": "https://github.com/bol-van/zapret/blob/master/docs/readme.md#nfqws",
+      "secureDoSGuide": "https://www.howtogeek.com/765940/how-to-enable-dns-over-https-on-windows-11/"
+    }
+  }
+}
